@@ -180,8 +180,8 @@ public class AuthController {
         if(roles.size() == 0){
             return ResponseEntity.ok(new MessageResponse("User Role Tidak tersedia!"));
         }else {
-//            user.setRoles(roles);
-//            User userSave = userRepository.save(user);
+            user.setRoles(roles);
+            User userSave = userRepository.save(user);
 
             Mail mail = new Mail();
             mail.setRecipient(signUpRequest.getEmail());
